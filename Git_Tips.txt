@@ -1,0 +1,52 @@
+git add - adds untracked files to git
+
+git commit -m "Added title" -m "some description"
+After git commit, the repository is now up to date.
+
+git push origin master
+pushes all the files to github.com
+
+git init
+turns a non-git folder into a git repository
+
+git remote add origin "ssh link here"
+if you created a git repo on your local machine, this command pushes it onto github
+
+git remote -v
+checked to see if your local repo is connected to a remote repo
+
+git push -u origin master
+allows you to not type out "origin master" next time you push onto github
+
+git branch
+shows what branches you have on a repo
+
+git checkout -b feature-readme-instruction
+this will create and go to the new branch that you created
+
+git checkout "branch"
+this will go to the branch you specified
+
+git branch -d feature-readme-instruction
+deletes the branch that you finished using
+
+git diff master
+if you type this from your feature branch, it will show the difference in code between master/feature
+
+git merge master
+if you type this from your feature branch, it will merge your feature branch onto the master branch
+
+git reset README.md (no arguments will reset all the files added)
+this will unstage a file. this does NOT undo the commit
+
+git reset HEAD~1
+this will completely undo the commit that you last made.
+
+git log
+shows all the git commits that you made and wrote. this is where you can copy and paste the hash shown to go back to a commit.
+
+git reset "paste hash here"
+does what i just described ^
+
+git reset --hard "paste hash here"
+it resets to THAT point and undoes all the changes that you made. good for restarting
