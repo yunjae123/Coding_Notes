@@ -1,4 +1,4 @@
-// DOM Stands for document object model
+// ****************** DOM Stands for document object model
 
 //Displays different info about the dom on to the console.
 console.log('document.head/body/title/URL/domain/doctype/forms/links/images')
@@ -36,7 +36,7 @@ elements.style.borderBottom = 'solid 3px #000';
 
 
 
-// Traversing the DOM
+// ****************** Traversing the DOM
 // parentNode property allows you to access the parent node of an element in the DOM.
 // there is also parentElement(); 
 var parent = element.parentNode;
@@ -60,7 +60,7 @@ var previousSibling = element.previousSibling;
 // closest method allows you to find the closest ancestor element that matches a specified CSS selector.
 var closestElement = element.closest(".className");
 
-//CREATING THINGS ON THE DOM
+// ****************** CREATING THINGS ON THE DOM
 // createElement
 var newDiv = document.createElement('div');
 newDiv.classname = 'hello';
@@ -71,9 +71,55 @@ newDiv.setAttribute('title', 'Hello Div');
 
 // Create text node
 newDivText = document.createTextNode('Hello World');
-
 // Append text to div
 newDiv.appendChild(newDivText);
-
 //----->
 <div class = 'hello' id = 'hello1' title = 'Hello Div'>Hello World</div>
+
+// Adding the newDiv into the DOM
+var h1 = document.querySelector('header h1');
+container.insertBefore(newDiv, h1);
+
+
+// ****************** EVENT LISTENERS
+var button = document.getElementById('button').addEventListener('click', buttonClick);
+
+function buttonClick(e) {
+    console.log(e.target); // Would output the element the event was fired from
+    console.log(e.type); // Would output 'click' if you used your mouse
+    console.log(e.clientX); // Would output horizontal position of the mouse FROM THE EDGE OF THE WINDOW
+    console.log(e.clientY); // Would output vertical  position of the mouse FROM THE EDGE OF THE WINDOW
+    console.log(e.offsetX); // Would output vertical  position of the mouse from the ELEMENT
+    console.log(e.offsetY); // Would output vertical  position of the mouse from the ELEMENT
+    console.log(e.altKey); // True or false for pressing alt key
+    console.log(e.ctrlKey); // True or false for pressing control key
+    console.log(e.shiftKey); // True or false for pressing shift key
+}
+
+//  
+var button = document.getElementById('button');
+
+// EVENT TYPE: Click
+button.addEventListener('click', runEvent);
+
+// EVENT TYPE: DOUBLE CLICK
+button.addEventListener('dblclick', runEvent);
+
+button.addEventListener('mousedown', runEvent);
+button.addEventListener('mouseup', runEvent);
+
+function runEvent(e) {
+    console.log("EVENT TYPE: " + e.type);
+}
+
+
+// ****************** EVENTS WITHOUT BUTTONS
+var box = document.getElementById('box');
+
+// As soon as the mous enters an area, the event listener triggers
+box.addEventListener('mouseenter', runEvent1);
+box.addEventListener('mouseleave', runEvent1);
+
+function runEvent1(e) {
+    console.log('EVENT TYPE: ' + e.type);
+}
