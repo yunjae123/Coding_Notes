@@ -34,3 +34,46 @@ for (var i = 0; i < odd.length; i++) {
 // How to change the element's property using CSS. Make sure to use camelCase for CSS selectors.
 elements.style.borderBottom = 'solid 3px #000';
 
+
+
+// Traversing the DOM
+// parentNode property allows you to access the parent node of an element in the DOM.
+// there is also parentElement(); 
+var parent = element.parentNode;
+
+// children property returns a collection of only the child elements (HTML elements) of the current element.
+// Instead, use the following methods to ignore the text nodes. These are preferred!
+var firstElementChild = element.firstElementChild;
+var lastElementChild = element.firstElementChild;
+var childElements = element.children;
+var nextElement = element.nextElementSibling;
+var previousElement = element.previousElementSibling;
+
+// childNodes property gives you a collection of all child nodes (including text nodes, element nodes, etc.) of an element.
+// IT INCLUDES ALL TEXT NODES TOO. Do not use these if you can.
+var children = element.childNodes;
+var firstChild = element.firstChild;
+var lastChild = element.lastChild;
+var nextSibling = element.nextSibling;
+var previousSibling = element.previousSibling;
+
+// closest method allows you to find the closest ancestor element that matches a specified CSS selector.
+var closestElement = element.closest(".className");
+
+//CREATING THINGS ON THE DOM
+// createElement
+var newDiv = document.createElement('div');
+newDiv.classname = 'hello';
+newDiv.id = 'hello1';
+newDiv.setAttribute('title', 'Hello Div');
+//-----> 
+<div class = 'hello' id = 'hello1' title = 'Hello Div'></div>
+
+// Create text node
+newDivText = document.createTextNode('Hello World');
+
+// Append text to div
+newDiv.appendChild(newDivText);
+
+//----->
+<div class = 'hello' id = 'hello1' title = 'Hello Div'>Hello World</div>
