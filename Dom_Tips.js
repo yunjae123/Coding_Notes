@@ -116,10 +116,78 @@ function runEvent(e) {
 // ****************** EVENTS WITHOUT BUTTONS
 var box = document.getElementById('box');
 
-// As soon as the mous enters an area, the event listener triggers
+// As soon as the mouse enters an area, the event listener triggers
 box.addEventListener('mouseenter', runEvent1);
 box.addEventListener('mouseleave', runEvent1);
 
+// When it enters or leaves the content within the element, the event listener triggers
+box.addEventListener('mouseover', runEvent1);
+box.addEventListener('mouseout', runEvent1);
+
+// Whenever the mouse MOVES at all
+box.addEventListener('mousemove', runEvent1);
+
 function runEvent1(e) {
+    console.log('EVENT TYPE: ' + e.type);
+
+    // This will display a constant location of the mouse
+    output.innerHTML = '<h3>MouseX: ' + e.offsetX + '</h3><h3>Mouse Y: ' + e.offsetY + '</h3>' 
+ 
+    // This will constantly change the color of the box
+    box.style.backgroundColor = 'rgb(' + e.offsetX + ',' + e.offsetY + ', 40)'; 
+}
+
+// ****************** EVENTS ON FORMS
+var itemInput = document.querySelector('input[type = "text"]');
+var form = document.querySelector('form');
+
+// Everytime a key is pressed on the keyboard, the event listener triggers
+itemInput.addEventListener('keydown', runEvent2)
+itemInput.addEventListener('keyup', runEvent2)
+itemInput.addEventListener('keypress', runEvent2)
+
+// When click INTO and OUT of a form, the event listener triggers
+itemInput.addEventListener('focus', runEvent2)
+itemInput.addEventListener('blur', runEvent2)
+
+// When you cut or paste a text, the event listner triggers
+itemInput.addEventListener('cut', runEvent2)
+itemInput.addEventListener('paste', runEvent2)
+
+// Whenver you pretty much do anything with the form input, it will trigger
+itemInput.addEventListener('input', runEvent2)
+
+
+function runEvent2(e) {
+    console.log('EVENT TYPE: ' + e.type);
+
+    // This prints in realtime the accumulation of the values you typed in
+    console.log(e.target.value);
+    // This prints your accumulated values onto a div with the ID of output
+    document.getElementById('output').innerHTML = '<h3>' + e.target.value + '</h3>';
+
+}
+
+
+// This will trigger whenever the user changes their options from the dropdown menu 
+var select = document.querySelector('select');
+select.addEventListener('change', runEvent3);
+
+// Whenver you pretty much do anything with the select input, it will trigger
+select.addEventListener('input', runEvent3)
+
+function runEvent3(e) {
+    console.log('EVENT TYPE: ' + e.type);
+
+    // You can also get the value
+    console.log(e.target.value);
+
+}
+
+// This prevents the form from submitting, therefore not letting the page refresh or update. Useful for asnychronous submissions
+form.addEventListener('select', runEvent4);
+
+function runEvent4(e) {
+    e.preventDefault();
     console.log('EVENT TYPE: ' + e.type);
 }
