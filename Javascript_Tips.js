@@ -45,7 +45,34 @@ console.log(arr2); // Outputs [ 'JAN', 'FEB', 'MAR', 'APR', 'MAY' ]
 // Instead of writing code like this;
 const user = { name: 'John Doe', age: 34 };
 
-const name = user.name;
-const age = user.age;
+const name3 = user.name;
+const age3 = user.age;
 // You can use ES6 destructuring to clean it up like this;
-const { name1, age1 } = user;
+const { name, age } = user;
+// Or you can name them different variables with this syntax
+const { name: name1, age: age1 } = user;
+
+// Nested object destructuring
+const LOCAL_FORECAST = {
+    yesterday: { low: 61, high: 75 },
+    today: { low: 64, high: 77 },
+    tomorrow: { low: 68, high: 80 }
+};
+      
+const {today: {low: lowToday, high:highToday}} = LOCAL_FORECAST;
+
+
+
+
+
+
+// Array destructuring ************************
+const [a, b, ...arr] = [1, 2, 3, 4, 5, 7];
+console.log(a, b); // [1],[2]
+console.log(arr); // [3,4,5,7]
+
+
+// 
+const profileUpdate = ({ name, age, nationality, location }) => {
+
+}
