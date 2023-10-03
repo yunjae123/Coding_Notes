@@ -72,7 +72,6 @@ console.log(a, b); // [1],[2]
 console.log(arr); // [3,4,5,7]
 
 
-// 
+// Use Destructuring Assignment to Pass an Object as a Function's Parameters
 const profileUpdate = ({ name, age, nationality, location }) => {
-
 }
