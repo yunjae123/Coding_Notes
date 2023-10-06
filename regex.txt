@@ -1,0 +1,49 @@
+They start and end with /text inside/
+
+//g will check all instances vs just one.
+//i will make the field case INSENSITIVE.
+
+** Assume that the g specifier is at the end of all these exmaples. 
+/e+/ match e OR at LEAST one e. e ee
+/re+/ re ree reee
+/re*/ r re ree
+/ea?/ match any e OR ea IF there are any. e ea 
+/e+a?/ match any e OR ee OR ea. e ee ea
+/re*/ matches all r AND any e's that follow. r re ree
+/.at/ match ANYTHING where it's placed. fat cat rat pat match
+/\./ will use the escape key to find all periods. '.' 
+/.\./ this will match ANY character that comes before the '.' that it's looking for. r. t. y. a. 
+/\w/ match all Alpha numerics and numbers. (Capital W will look for white space instead)
+/\d/ Looks for any digits. 6 7 9 
+/[^0-9]/ Would be equal do \D where it looks for the opposite of digits
+/\s/ match any form of whitespaace. (Capital S will look for word characters instead)
+/\w{4}/ will find any words that are four letters long. word long kore writ 
+/\w{4,}/ any 4 digits OR more. word longer korean writing
+/\w{4, 5}/ 4 digits OR 5. spicy word korea bear beard 
+/[fc]at/ Character set. Match any characters inside of the brackets. cat fat 
+/[a-zA-Z0-9]at/ Now a range of character set. Fat cat 3at 7at Mat pat Pat
+/(t|T)he/ Parenthesis makes a grouping. the The
+/(t|r|e){2,3}\./ Combining grouping and the length limit with a period at the end. re., ter, er, eet., et
+/(re){2,3}/ rere, rerere
+/^T/ Match the BEGINNING of the line. T <-- first letter of the sentence
+/\.$/ The $ matches at the END of the sentence, in this case, the last period
+/(?<=[tT]he)./ This is a positive look-behind. Will find one WILDCARD that comes AFTER 'the' or 'The', WITHOUT capturing 'the' itself
+/(?<![tT]he)./ The opposite of a positive look-behind. Will find every character EXCEPT the spaces that come after 'the'
+/.(?=at)/ This is the look-ahead. c of 'cat' f of 'fat' 
+/.(?!at)/ Opposite of the above. Will find everything except for the c of 'cat' or f of 'fat'
+
+
+Examples:
+Look for a 9 digit phone number.
+1. 123-456-7890
+2. 1234567890
+3. 123 456 7890
+
+/\d{9}/ Will capture 2. 
+/\d{3}-?\d{3}-?\d{4}/ Will capture both 1 and 2.
+/\d{3}[ -]?\d{3}[ -]?\d{4}/ Will capture 1, 2 and 3.
+
+
+
+"Code Camp".replace(/(\w+)\s(\w+)/, '$2 $1');
+                     Code   Camp     Switch
