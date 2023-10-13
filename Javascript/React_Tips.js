@@ -1,0 +1,1 @@
+// React is a Javascript LIBRARY, good for SPA's (single page apps)
