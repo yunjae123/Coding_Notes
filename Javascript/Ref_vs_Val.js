@@ -64,3 +64,10 @@ function add(array, element) { //(0x01, 3)
 add(c, 3);
 
 //c will still equal [1, 2], because inside of the function, array will be set to a new memory location (0x02)
+
+for (var i = 0; i < 3; i++) {
+    const log = () => {
+        console.log(i);
+    }
+    setTimeout(log, 100);
+}
