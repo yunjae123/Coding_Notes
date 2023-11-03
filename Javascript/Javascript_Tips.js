@@ -75,3 +75,16 @@ console.log(arr); // [3,4,5,7]
 // Use Destructuring Assignment to Pass an Object as a Function's Parameters
 const profileUpdate = ({ name, age, nationality, location }) => {
 }
+
+
+
+// How to check the type of data 
+console.log(typeof ""); //String
+console.log(typeof 0);  //Number
+console.log(typeof []); //Object
+console.log(typeof {}); //Object
+
+
+//How to check for properties in an object
+users.hasOwnProperty('Alan');  //True
+'Alan' in users;               //True
