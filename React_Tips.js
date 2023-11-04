@@ -59,3 +59,18 @@ useEffect(() => {
 
 JSON SERVER 
 //npx json-server --watch data/db.json --port 8000
+
+
+fetch //This is the format to grab data from an API.
+useEffect(() => {
+    fetch('url')
+        .then(res => {
+            return res.json();
+        }).then(data => {
+            setBlogs(data);
+        })
+}, []);
+
+
+
+{blogs && <BLogList blogs={blogs} handleDelete={handleDelete} />}
