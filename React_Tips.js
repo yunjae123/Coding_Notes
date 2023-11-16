@@ -1,5 +1,8 @@
 // Index.js is the starting point that sets up the React app by rendering the root component (App.js) into the actual DOM, and App.js defines the root React component that represents the core UI of your application.
 
+2 Types of components: 
+//Functional && Class
+
 npm run start // This starts up the broswer preview of your project.
 
 node_modules // directory is included in .gitignore due to the large file size. 
@@ -73,4 +76,5 @@ useEffect(() => {
 
 
 
-{blogs && <BLogList blogs={blogs} handleDelete={handleDelete} />}
+{blogs && <BLogList blogs={blogs} />} 
+//This is conditional templating. This is useful because the fetch function above can take some time. This means that initially, the blogs variable will be null. And MAP cannot be used on null. 
