@@ -1,7 +1,8 @@
 // Index.js is the starting point that sets up the React app by rendering the root component (App.js) into the actual DOM, and App.js defines the root React component that represents the core UI of your application.
 
-2 Types of components: 
-//Functional && Class
+SSR // Next.js utilizes server-side-rendering, unlike React which are client-side rendered. This means the pages are rendered on the server before being sent to the user's browser. This is great for SEO(search engine optimization) and improves the performance/speed.
+
+SSG // Static Site Generation. Next.js pre-renders pages at build time. That means that your web pages are generated as static HTML files during the build process. This makes Next.js super fact and efficient, especially for pages that don't need to be updated often.
 
 npm run start // This starts up the broswer preview of your project.
 
