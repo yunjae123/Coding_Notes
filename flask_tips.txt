@@ -2,3 +2,8 @@ virtualenv .venv //this initializes the venv
 source .venv/bin/activate //this runs the venv
 pip3 install flask //just installs flask
 
+When using 
+export FLASK_APP=app, make sure that you're in the right directory
+I was in the src package before running that line.
+Then I was able to run 
+flask run
