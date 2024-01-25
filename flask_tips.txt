@@ -5,7 +5,6 @@ deactivate // just gets out of the venv
 pip3 install flask //just installs flask
 
 When using 
-export FLASK_APP=app, make sure that you're in the right directory
-I was in the src package before running that line.
-Then I was able to run 
+export FLASK_APP=app, make sure that you're in the src
+then you can run
 flask run
