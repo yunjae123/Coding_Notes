@@ -1,5 +1,7 @@
 virtualenv .venv //this initializes the venv
 source .venv/bin/activate //this runs the venv
+deactivate // just gets out of the venv
+
 pip3 install flask //just installs flask
 
 When using 
