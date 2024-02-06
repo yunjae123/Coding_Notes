@@ -1,13 +1,19 @@
-git add - adds untracked files to git
+git init
+turns a non-git folder into a git repository
+that creates a new subdirectory named .git
+it's always in relation to the current working directory
+
+ls -a
+lists all files in the current directory
+
+git add 
+adds untracked files to git
 
 git commit -m "Added title" -m "some description"
 After git commit, the repository is now up to date.
 
 git push origin master
 pushes all the files to github.com
-
-git init
-turns a non-git folder into a git repository
 
 git remote add origin "ssh link here"
 if you created a git repo on your local machine, this command pushes it onto github
