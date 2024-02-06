@@ -71,7 +71,7 @@ git log
 shows all the git commits that you made and wrote. this is where you can copy and paste the hash shown to go back to a commit.
 
 git reset "paste hash here"
-does what i just described ^
+does what i just described ^, goes back to the commit you've just input
 
 git reset --hard "paste hash here"
 it resets to THAT point and undoes all the changes that you made. good for restarting
