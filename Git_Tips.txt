@@ -48,6 +48,9 @@ when your feature branch is a couple commits ahead, you can move to your main br
 git merge master (be on FEATURE) - This goes backwards, so a no-go?
 if you type this from your feature branch, it will merge your feature branch onto the master branch
 
+esc && :wq
+when you have merging conflicts, after having resolved them, this is how you navigate in your vim editor
+
 git reset README.md (no arguments will reset all the files added)
 this will unstage a file. this does NOT undo the commit
 
