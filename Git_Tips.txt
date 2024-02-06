@@ -9,11 +9,14 @@ lists all files in the current directory
 git add 
 adds untracked files to git
 
+git diff --name-only --cached
+this shows all the staged files that are "added"
+
 git commit -m "Added title" -m "some description"
 After git commit, the repository is now up to date.
 
-tag
-this adds tags to important commits 
+git tag v0.1
+this creates a tag to that specific commit that you can use "checkout" to move to
 
 git push origin master
 pushes all the files to github.com
@@ -30,13 +33,13 @@ allows you to not type out "origin master" next time you push onto github
 git branch
 shows what branches you have on a repo
 
-git checkout -b feature-readme-instruction
-this will create and go to the new branch that you created
+git checkout -b feature
+this will create and go to the new branch that you created "feature"
 
 git checkout "branch"
 this will go to the branch you specified
 
-git branch -d feature-readme-instruction
+git branch -d feature
 deletes the branch that you finished using
 
 git diff master
