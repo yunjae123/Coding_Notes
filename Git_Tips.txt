@@ -15,7 +15,7 @@ this shows all the staged files that are "added"
 git commit -m "Added title" -m "some description"
 After git commit, the repository is now up to date.
 
-git tag v0.1
+git tag "v0.1" (the quotes don't matter. you can have no quotes)
 this creates a tag to that specific commit that you can use "checkout" to move to
 
 git push origin master
