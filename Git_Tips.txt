@@ -48,6 +48,9 @@ if you type this from your feature branch, it will show the difference in code b
 git merge feature (be on MAIN) - This is the correct way to merge your main to feature
 when your feature branch is a couple commits ahead, you can move to your main branch (that's behind) and this code above will Fast-forward merge the main branch up-to-date with the feature branch
 
+git tag "v0.3"
+again, you would tag your merge
+
 git merge master (be on FEATURE) - This goes backwards, so a no-go?
 if you type this from your feature branch, it will merge your feature branch onto the master branch
 
