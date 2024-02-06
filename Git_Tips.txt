@@ -54,6 +54,10 @@ again, you would tag your merge
 git merge master (be on FEATURE) - This goes backwards, so a no-go?
 if you type this from your feature branch, it will merge your feature branch onto the master branch
 
+git log --oneline
+This shows the list of all of the granches done so far
+
+WHEN IN VIM FOR INTERNAL EDITING
 esc && :wq
 when you have merging conflicts, after having resolved them, this is how you navigate in your vim editor
 
