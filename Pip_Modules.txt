@@ -4,6 +4,7 @@ pip install -r requirements.txt
 pip freeze > requirements.txt
 
 
+
 //venv and flask
 virtualenv .venv //this initializes the venv
 source .venv/bin/activate //this runs the venv
