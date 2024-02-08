@@ -1,3 +1,9 @@
+git remote -v
+checks to see if your repository is using https or ssh
+
+git remote set-url origin git@github.com:username/repository.git
+this changes your https repository to ssh
+
 git init
 turns a non-git folder into a git repository
 that creates a new subdirectory named .git
