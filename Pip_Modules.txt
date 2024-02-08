@@ -7,7 +7,11 @@ pip freeze > requirements.txt
 
 //venv and flask
 virtualenv .venv //this initializes the venv
-source .venv/bin/activate //this runs the venv
+
+source .venv/bin/activate //this runs the venv MAC
+
+.\env\Scripts\activate //WINDOWS
+
 deactivate // just gets out of the venv
 
 pip3 install flask //just installs flask
