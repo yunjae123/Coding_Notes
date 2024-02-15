@@ -39,6 +39,8 @@ allows you to not type out "origin master" next time you push onto github
 
 git branch
 shows what branches you have on a repo
+From here, you can type 
+:q to get out of the window
 
 git checkout -b feature
 this will create and go to the new branch that you created "feature"
