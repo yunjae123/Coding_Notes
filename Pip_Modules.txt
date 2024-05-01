@@ -21,4 +21,5 @@ export FLASK_APP=app, make sure that you're in the src
 then you can run
 flask run
 
- 
+export SECRET_KEY='your_secret_key_here'
+flask run
